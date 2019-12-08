@@ -2,14 +2,15 @@
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
+	font-weight: normal;
 }
 
 body {
 	/*background-color: #171614;*/
 	/*background: linear-gradient(#a49f93, #ffb0d5) fixed;*/
 	animation: shift 10s infinite ease-in-out;
-	font-family: 'Crimson Text', "Times New Roman", Times, serif;
-	color: #f4e7dd;
+	font-family: 'Ibarra Real Nova', "Times New Roman", Times, serif;
+	color: #030303;
 	font-weight: 400;
 }
 
@@ -64,15 +65,17 @@ div.trees {
 h1 {
 	font-weight: normal;
 	line-height: 1rem;
+	font-size: 54px;
+	color: #030303;
 }
 
 .highlight {
 
-	background: linear-gradient(to right, lavender, pink);
+	/*background: linear-gradient(to right, lavender, pink);*/
 	padding: .1rem .3rem .2rem;
 	border-radius: .2rem;
-	color: salmon;
-	font-style: italic;
+	font-size: 2rem;
+	/*animation: shiftfont 10s infinite ease-in-out;*/
 
 }
 
@@ -90,6 +93,13 @@ h1 {
 	40% {background: #c8a4b5;}
 	80% {background: #a6778d;}
 	100% {background: #a49f93;}
+}
+
+@keyframes shiftfont {
+	0% {color: #a49f93; }
+	40% {color: #c8a4b5;}
+	80% {color: #a6778d;}
+	100% {color: #a49f93;}
 }
 
 /*
@@ -115,9 +125,9 @@ h1 {
 p {
 	max-width: 50vw;
 	margin: auto;
-	font-style: italic;
 	margin-bottom: 1.25rem;
-	line-height: 1.25rem;
+	line-height: 1.75rem;
+	font-size: 1rem;
 }
 
 div.email {
