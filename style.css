@@ -1,7 +1,3 @@
-@font-face {
-	font-family: "Jenson";
-	src: url("http://avherbaliste.com/AJensonPro-Regular.otf");
-}
 
 * {
 	margin: 0;
@@ -14,27 +10,26 @@ body {
 	/*background-color: #171614;*/
 	/*background: linear-gradient(#a49f93, #ffb0d5) fixed;*/
 	animation: shift 10s infinite ease-in-out;
-	font-family: 'Adobe Jenson Pro', 'Jenson', "Times New Roman", Times, serif;
+	font-family: 'Cutive Mono', serif, monospace;
 	color: #403737;
 	font-weight: 400;
+	overflow-x: hidden !important;
 }
 
 section#intro {
-	/*height: 100vh;*/
+	height: 100vh;
+	width: 99vw;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
-	/*align-items: center;*/
-	justify-content: space-around;
-} section#intro h1 {
-	font-size: 1.25rem;
-	text-align: center;
-	line-height: 1.5rem;
-	color: cornsilk;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
 }
 
 div.hero-image {
-	width: 35vw;
-	padding-top: 2vw;
+	width: 40vw;
 	margin: auto;
 	/*animation: fade-in 5s infinite ease-in-out;*/
 }
@@ -42,30 +37,34 @@ div.hero-image {
 div.hero-image img {
 	width: 100%;
 	height: auto;
+}
 
+div.enter {
+	opacity: 0;
+	height: 15vh;
+	color: #ffe5cd;
+} div.enter:hover {
+	color: white;
+	cursor: pointer;
+}
+
+div.content {
+	opacity: 0;
+}
+
+section#title {
+	text-align: center;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+div.title-card {
+	margin-top: 15vh;
 }
 
 section#info {
-	margin-top: 40vh;
-	text-align: center;
-}
-
-div.leaves {
-	width: 100%;
-	height: 120vh;
-} div.leaves img {
-	width: 100%;
-	height: auto;
-}
-
-div.tiles {
-	width: 40vw;
-	height: 30vw;
-	margin:4vw auto;
-	background: url(tiles.jpeg), linear-gradient(#a49f93, #ffb0d5) fixed;
-	background-size: contain;
-	background-blend-mode: multiply;
-	opacity: 0;
 }
 
 div.trees {
@@ -73,6 +72,20 @@ div.trees {
 	height: 140vh;
 	background: url(trees.png) fixed;
 	background-size: contain;
+	opacity: 0;
+}
+
+.card {
+	background-color: #a49f93;
+	width: 35vw;
+	padding: 2rem;
+    position: relative;
+	top: -120vh;
+	animation: shift 10s infinite ease-in-out;
+	box-shadow: 0 0 1rem rgba(64, 55, 55, .5);
+	border-radius: .25rem;
+	margin: auto;
+	opacity: 0;
 }
 
 h1 {
@@ -142,7 +155,7 @@ p {
 }
 
 a {
-	color: ffe5cd;
+	color: #ffe5cd;
 }
 
 div.email {
@@ -151,23 +164,38 @@ div.email {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+	border: none;
 }
 
-.box {
-	width: 200px;
-	height: 50px;
-	border: 2px solid white;
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='submit'],
+  input[type='text'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
-.card {
-	background-color: #a49f93;
-	width: 35vw;
-	padding: 2rem;
-	position: relative;
-	top: -100vh;
-	/*box-shadow: 0 0 1rem rgba(0,0,0,.5);*/
-	box-shadow: 0 0 1rem rgba(64, 55, 55, .5);
-	border-radius: .25rem;
-	animation: shift 10s infinite ease-in-out;
-	margin: auto;
+form {
+
+	border: none;
+	color: #403737;
+	font-family: "Cutive Mono";
+
+}
+
+input[type=submit] {
+	background-color: #ffe5cd;
+	border: 3px solid #ffe5cd;
+	color: #403737;
+	padding: 1em;
+	border: 0;
+	font-family: "Cutive Mono";
+}
+
+input[type=text] {
+	background-color: transparent;
+	border: 3px solid #ffe5cd;
+	color: white;
+	padding: 1em;
 }
