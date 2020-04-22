@@ -1,0 +1,205 @@
+@font-face {
+	font-family: "Jenson";
+	src: url("http://cath.land/av-site/av-sketch3/AJensonPro-Regular.otf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+body {
+	/*background-color: #171614;*/
+	/*background: linear-gradient(#a49f93, #ffb0d5) fixed;*/
+	animation: shift 10s infinite ease-in-out;
+	font-family: 'Cutive Mono', 'Jenson', "Times New Roman", Times, serif;
+	color: #403737;
+	font-weight: 400;
+	overflow-x: hidden !important;
+}
+
+section#intro {
+	height: 100vh;
+	width: 99vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+div.hero-image {
+	width: 40vw;
+	margin: auto;
+	/*animation: fade-in 5s infinite ease-in-out;*/
+}
+
+div.hero-image img {
+	width: 100%;
+	height: auto;
+}
+
+div.enter {
+	opacity: 0;
+	height: 15vh;
+	color: #ffe5cd;
+} div.enter:hover {
+	color: white;
+	cursor: pointer;
+}
+
+div.content {
+	opacity: 0;
+}
+
+section#title {
+	text-align: center;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+div.title-card {
+	margin-top: 15vh;
+}
+
+section#info {
+}
+
+div.trees {
+	width: 100%;
+	height: 140vh;
+	background: url(trees.png) fixed;
+	background-size: contain;
+	opacity: 0;
+}
+
+.card {
+	background-color: #a49f93;
+	width: 35vw;
+	padding: 2rem;
+    position: relative;
+	top: -120vh;
+	animation: shift 10s infinite ease-in-out;
+	box-shadow: 0 0 1rem rgba(64, 55, 55, .5);
+	border-radius: .25rem;
+	margin: auto;
+	opacity: 0;
+}
+
+h1 {
+	font-weight: normal;
+	line-height: 1rem;
+	font-size: 3rem;
+}
+
+.highlight {
+	/*color: #ffe5cd;*/
+	/*background: linear-gradient(to right, lavender, pink);*/
+	padding: .1rem .3rem .2rem;
+	border-radius: .2rem;
+	font-size: 2rem;
+	/*animation: shiftfont 10s infinite ease-in-out;*/
+
+}
+
+.words {
+	margin: 10vh;
+}
+
+.eye {
+	margin: auto;
+	text-align: center;
+}
+
+@keyframes shift {
+	0% {background: #a49f93; }
+	40% {background: #c8a4b5;}
+	80% {background: #a6778d;}
+	100% {background: #a49f93;}
+}
+
+@keyframes shiftfont {
+	0% {color: #ffe5cd; }
+	40% {color: lightyellow;}
+	80% {color: lavender;}
+	100% {color: honeydew;}
+}
+
+/*
+@keyframes shift {
+			0% {background: linear-gradient(#a49f93, #ffb0d5) fixed;}
+			50% {background: linear-gradient(#a49f93, #d0b26b) fixed;}
+			100% {background: linear-gradient(#a6778d, #ffb0d5) fixed;}
+	}
+*/
+
+	/* shimmery like water */
+
+@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+
+		50% { opacity: 1}
+
+		100% { opacity: .5};
+}
+
+p {
+	margin: auto;
+	margin-bottom: 1.25rem;
+	line-height: 1.75rem;
+	font-size: 1rem;
+}
+
+a {
+	color: #ffe5cd;
+}
+
+div.email {
+	width: 40vw;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	border: none;
+}
+
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='submit'],
+  input[type='text'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+form {
+
+	border: none;
+	color: #403737;
+	font-family: "Cutive Mono";
+
+}
+
+input[type=submit] {
+	background-color: #ffe5cd;
+	border: 3px solid #ffe5cd;
+	color: #403737;
+	padding: 1em;
+	border: 0;
+	font-family: "Cutive Mono";
+}
+
+input[type=text] {
+	background-color: transparent;
+	border: 3px solid #ffe5cd;
+	color: white;
+	padding: 1em;
+}
