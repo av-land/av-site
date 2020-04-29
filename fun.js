@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 $(".leaves").hide();
 $(".hero-image").hide();
 
@@ -12,34 +11,59 @@ $(".hero-image").fadeIn(6000, function(){
 
 var scrolled = false;
 
-$("body").css({overflow: "hidden"});
+var heroVisible = $(".hero-image").is(":visible");
+
+// $("body").css({overflow: "hidden"});
 
 $(".enter").click(function(){
-	$(".hero-image").fadeOut(400);
-	$(".enter").fadeOut(400, function(){
-		$(".content").animate({opacity: 1}, 600, function(){
-			$(".trees").animate({opacity: 1}, 2000, function(){
-				scrollani();
-			});
-		});
-	});
 
-	$("body").css({overflow: "scroll"});
+	contentFadeIn();
+
 });
+
+scrollFadeIn();
 
 
 // TO DO :
-// have card and other content fade in on scroll
+// intro fade on scroll
 
-function scrollani() {
+// fades out splash stuff and fades in content
+function contentFadeIn() {
+	$(".hero-image").fadeOut(400);
+		$(".enter").fadeOut(400, function(){
+			$(".content").animate({opacity: 1}, 600, function(){
+				$(".trees").animate({opacity: 1}, 2000, function(){
+					infoFadeIn();
+				});
+			});
+		});
+}
+
+function scrollFadeIn() {
+	$(document).scroll(function(){
+
+		var scrollTop = $(document).scrollTop();
+
+
+		if (heroVisible) {
+			console.log("hero is visible");
+			contentFadeIn();
+		} else {
+			console.log("hero is hidden");
+		}
+
+	});
+}
+
+function infoFadeIn() {
 	$(document).scroll(function(){
 
 		var scrollTop = $(document).scrollTop();
 
 		console.log("scrollTop is "+scrollTop);
 		
-		if (scrollTop > 250) {
-			$(".card").animate({opacity: 1}, 600);
+		if (scrollTop > 150) {
+			$(".info-card").animate({opacity: 1}, 600);
 			console.log('yes');
 		} else {
 			console.log('else');	
